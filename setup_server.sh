@@ -23,5 +23,5 @@ hcloud server create --name ${SERVER_NAME} --ssh-key ${SSH_IDENTITY} --type ${SE
 sleep 30
 
 # get the ip address and setup the server 
-# IP_ADDRESS=$(hcloud server list | grep ${SERVER_NAME} | tr -s ' ' | cut -d ' ' -f 4)
-hcloud server ssh $SERVER_NAME
+IP_ADDRESS=$(hcloud server list | grep ${SERVER_NAME} | tr -s ' ' | cut -d ' ' -f 4)
+ssh -i ~/.ssh/$SSH_IDENTITY -o StrictHostKeyChecking=accept-new root@$IP_ADDRESS
