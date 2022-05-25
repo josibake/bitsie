@@ -1,8 +1,11 @@
 # BITSIE (BITcoin SImulation Engine)
 
-scripts and examples for running simulations against Bitcoin Core. at a high level:
+scripts and examples for running simulations against Bitcoin Core. this assumes you have already setup a hertzner account and setup the hertzner cli `hcloud`.
+
+at a high level:
 
 1. set up your server (`setup_server.sh`)
+2. clone bitsie (`git clone https://github.com/josibake/bitsie.git`)
 2. install dependencies (`install_dependencies.sh`)
 3. create your baseline and feature worktrees (example below)
 4. run simulations (`run_sims.sh`)
