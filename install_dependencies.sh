@@ -29,14 +29,15 @@ apt-get update
 # echo "| installing bitcoin core dependencies |"
 # echo "----------------------------------------"
 
-echo "---------------"
-echo "| install bcc |"
-echo "---------------"
-
-apt-get install bpfcc-tools linux-headers-$(uname -r)
+echo "------------------------"
+echo "| install dependencies |"
+echo "------------------------"
 
 # install build dependencies for bitcoin core
 apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils python3 libevent-dev libboost-dev libsqlite3-dev systemtap-sdt-dev
+
+# install bcc tooling
+apt-get install bpfcc-tools linux-headers-$(uname -r)
 
 # install pip and gitPython
 apt-get install python3-pip && pip install gitPython
@@ -46,5 +47,7 @@ echo "| setup repos |"
 echo "---------------"
 
 # get bitcoin core, helper scripts, and the simulation scenarios
+pushd $HOME
 git clone https://github.com/bitcoin/bitcoin.git
 git clone https://github.com/achow101/coin-selection-simulation.git
+popd
