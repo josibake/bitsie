@@ -31,5 +31,6 @@ git worktree add ../feature
 Next, run simulations for your baseline. Provide a scenario and feerates from the simulation scenarios repo and run the simulation X times (you can use the helper script `run_sims.sh`):
 
 ```sh
+mkdir /root/sim-results
 /root/bitsie/run_sims.sh /root/baseline/ 5 /root/sim-results/ /root/coin-selection-simulation/payments/bustabit-tiny-hot-wallet.csv /root/coin-selection-simulation/feerates/2019-2020-per-day.csv
 ```
