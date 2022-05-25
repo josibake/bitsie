@@ -43,4 +43,3 @@ echo "---------------"
 # get bitcoin core, helper scripts, and the simulation scenarios
 git clone https://github.com/bitcoin/bitcoin.git
 git clone https://github.com/achow101/coin-selection-simulation.git
-git clone https://github.com/josibake/bitsie.git
